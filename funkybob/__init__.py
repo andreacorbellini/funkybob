@@ -255,8 +255,9 @@ class RandomNameGenerator(NameGenerator):
 
 class UniqueRandomNameGenerator(RandomNameGenerator, collections.Sequence):
 
-    def __init__(self,
-            members=2, separator='_', seed=None, names=None, adjectives=None):
+    def __init__(
+            self, members=2, separator='_', seed=None,
+            names=None, adjectives=None):
         super().__init__(members, separator, names, adjectives)
         self._rnd_indices = RandomPermutation(len(self._sequence), seed)
 

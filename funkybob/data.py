@@ -1,6 +1,6 @@
 # List of names and adjectives from
 # https://raw.githubusercontent.com/moby/moby/master/pkg/namesgenerator/names-generator.go
-# Retrieved Mon May  7 16:56:34 2018
+# Retrieved Mon May  7 18:03:58 2018
 
 NAMES = [
     'albattani',

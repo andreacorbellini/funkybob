@@ -3,7 +3,9 @@ from datetime import datetime
 import requests
 
 
-DOCKER_NAMEGEN_URL = 'https://raw.githubusercontent.com/moby/moby/master/pkg/namesgenerator/names-generator.go'
+DOCKER_NAMEGEN_URL = (
+    'https://raw.githubusercontent.com/moby/moby/master/'
+    'pkg/namesgenerator/names-generator.go')
 
 
 def fetch_docker_name_generator():
