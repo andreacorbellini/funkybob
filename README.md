@@ -29,6 +29,16 @@ This makes names much more easier to distinguish and less likely to generate
 confusion.
 
 
+## Installation
+
+The package is hosted on [PyPI](https://pypi.org/project/funkybob/),
+to install use:
+
+```shell
+$ pip install funkybob
+```
+
+
 ## Generators
 
 funkybob ships three different name generators:
