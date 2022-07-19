@@ -1,4 +1,4 @@
-import collections
+from collections.abc import Sequence, Iterable
 import functools
 import itertools
 import random
@@ -23,7 +23,7 @@ def _binom(n, k):
     return _binom(n - 1, k - 1) + _binom(n - 1, k)
 
 
-class Combinations(collections.Sequence):
+class Combinations(Sequence):
 
     def __init__(self, seq, r):
         self.seq = seq
@@ -74,7 +74,7 @@ class Combinations(collections.Sequence):
         return tuple(result)
 
 
-class Product(collections.Sequence):
+class Product(Sequence):
 
     def __init__(self, seq1, seq2):
         self.seq1 = seq1
@@ -99,7 +99,7 @@ class Product(collections.Sequence):
         return self.seq1[i], self.seq2[j]
 
 
-class RandomPermutation(collections.Sequence):
+class RandomPermutation(Sequence):
 
     # List of primes used for our quadratic residue PRGN. It's important that
     # these primes satisfy (p % 4) == 3.
@@ -172,7 +172,7 @@ class RandomPermutation(collections.Sequence):
         return res
 
 
-class NameGenerator(collections.Iterable):
+class NameGenerator(Iterable):
 
     def __init__(self, members=2, separator='_', names=None, adjectives=None):
         if members < 1:
@@ -253,7 +253,7 @@ class RandomNameGenerator(NameGenerator):
             yield self._get_name(i)
 
 
-class UniqueRandomNameGenerator(RandomNameGenerator, collections.Sequence):
+class UniqueRandomNameGenerator(RandomNameGenerator, Sequence):
 
     def __init__(
             self, members=2, separator='_', seed=None,
